@@ -1,0 +1,111 @@
+.checkout-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-row {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.payment-info {
+  margin-bottom: 2rem;
+}
+
+.payment-info h3 {
+  color: #00b0c8;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.payment-methods img {
+  height: 30px;
+  filter: brightness(0.8);
+  transition: filter 0.3s ease;
+}
+
+.payment-methods img:hover {
+  filter: brightness(1);
+}
+
+.card-element-container {
+  padding: 1rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #2a2a2a;
+}
+
+.pay-button {
+  background-color: #00b0c8;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.pay-button:hover {
+  background-color: #008a9b;
+}
+
+.pay-button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+.secure-badge {
+  text-align: center;
+  color: #00b0c8;
+  padding: 1rem;
+  border-top: 1px solid #444;
+}
+
+.secure-badge span {
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.secure-badge p {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Payment Status Messages */
+.payment-status {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.payment-status.success {
+  background-color: rgba(0, 255, 0, 0.1);
+  color: #00ff00;
+}
+
+.payment-status.error {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #ff0000;
+}
