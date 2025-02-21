@@ -6,17 +6,26 @@
 .future-cities h2 {
   text-align: center;
   color: var(--primary-color);
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 3px;
+  text-shadow: 0 0 10px rgba(0, 176, 200, 0.5);
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-gray);
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  font-style: italic;
 }
 
 .cities-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -36,6 +45,7 @@
 .city-image {
   height: 250px;
   overflow: hidden;
+  position: relative;
 }
 
 .city-image img {
@@ -62,12 +72,40 @@
   color: var(--primary-color);
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  text-shadow: 0 0 5px rgba(0, 176, 200, 0.5);
 }
 
 .city-info p {
   color: var(--text-light);
   font-size: 1rem;
   line-height: 1.6;
+}
+
+/* Shine effect */
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.shine:hover::before {
+  left: 100%;
 }
 
 /* Animación de entrada */
@@ -91,11 +129,16 @@
 .city-card:nth-child(2) { animation-delay: 0.2s; }
 .city-card:nth-child(3) { animation-delay: 0.3s; }
 .city-card:nth-child(4) { animation-delay: 0.4s; }
+.city-card:nth-child(5) { animation-delay: 0.5s; }
 
 /* Responsive */
 @media (max-width: 768px) {
   .future-cities h2 {
     font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
   }
 
   .cities-grid {
